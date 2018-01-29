@@ -777,8 +777,7 @@ void iob_finish(void)
       if(isPosTq[i]){
         // position & torque control
         //ctq = -(q - q_ref) * Pgain[i] - (dq - dq_ref) * Dgain[i] - (tq - tq_ref) * tqPgain[i] - (dtq - dtq_ref) * tqDgain[i];
-        ctq = -(q - q_ref) *   Pgain[i] / (tqPgain[i] + 1) - (dq  -  dq_ref) *   Dgain[i] / (tqPgain[i] + 1)
-                +  tq_ref  * tqPgain[i] / (tqPgain[i] + 1) - (dtq - dtq_ref) * tqDgain[i] / (tqPgain[i] + 1);
+        ctq = -(q - q_ref) * Pgain[i] - (dq - dq_ref) * Dgain[i] + tq_ref * tqPgain[i] - (dtq - dtq_ref) * tqDgain[i];
       } else {
         ctq = -(q - q_ref) * Pgain[i] - (dq - dq_ref) * Dgain[i]; // simple PD control
       }
