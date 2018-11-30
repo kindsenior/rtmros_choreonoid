@@ -34,7 +34,7 @@
   <arg unless="$(arg USE_ROBOTHARDWARE)"
        name="BRIDGE_SIMULATOR_NAME" default="$(arg SIMULATOR_NAME)" />
   <arg name="MODEL_FILE"     value="$(find jsk_models)/JAXON_BLUE/JAXON_BLUEmain.wrl"/>
-  <arg name="COLLADA_FILE"   value="$(find hrpsys_ros_bridge_tutorials)/models/JAXON_BLUE.urdf"/>
+  <arg name="COLLADA_FILE"   value="$(find hrpsys_ros_bridge_tutorials)/models/JAXON_BLUE_SENSORS.urdf"/>
   <arg name="CONF_FILE"      value="$(find hrpsys_ros_bridge_tutorials)/models/JAXON_BLUE.conf"/>
   <arg name="HRPSYS_PY_PKG"  value="hrpsys_choreonoid_tutorials"/>
   <arg if="$(arg USE_ROBOTHARDWARE)"
