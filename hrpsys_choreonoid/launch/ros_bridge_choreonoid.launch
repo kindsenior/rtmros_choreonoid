@@ -9,6 +9,7 @@
 
   <arg name="USE_ROBOTHARDWARE"       default="true" />
   <arg name="USE_WALKING"             default="true"  />
+  <arg name="USE_AUTOBALANCESTABILIZER" default="false"  />
   <arg name="USE_COLLISIONCHECK"      default="false" />
   <arg name="USE_IMPEDANCECONTROLLER" default="true"  />
   <arg name="USE_GRASPCONTROLLER"     default="false" />
@@ -32,6 +33,7 @@
     <arg name="USE_ROBOTHARDWARE" default="$(arg USE_ROBOTHARDWARE)" />
     <!-- unstable RTC -->
     <arg name="USE_WALKING"               value="$(arg USE_WALKING)" />
+    <arg name="USE_AUTOBALANCESTABILIZER" value="$(arg USE_AUTOBALANCESTABILIZER)" />
     <arg name="USE_COLLISIONCHECK"        value="$(arg USE_COLLISIONCHECK)" />
     <arg name="USE_IMPEDANCECONTROLLER"   value="$(arg USE_IMPEDANCECONTROLLER)" />
     <arg name="USE_GRASPCONTROLLER"       value="$(arg USE_GRASPCONTROLLER)" />
