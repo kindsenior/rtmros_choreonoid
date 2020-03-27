@@ -20,8 +20,9 @@ class JAXON_BLUECnoidHrpsysConfigurator(ChoreonoidHrpsysConfigurator, JAXON_BLUE
             ['rmfo', "RemoveForceSensorLinkOffset"],
             ['es', "EmergencyStopper"],
             ['ic', "ImpedanceController"],
-            ['abc', "AutoBalancer"],
-            ['st', "Stabilizer"],
+            # ['abc', "AutoBalancer"],
+            # ['st', "Stabilizer"],
+            ['abst', "AutoBalanceStabilizer"],
             ['co', "CollisionDetector"],
             # ['tc', "TorqueController"],
             # ['te', "ThermoEstimator"],
@@ -41,12 +42,12 @@ class JAXON_BLUECnoidHrpsysConfigurator(ChoreonoidHrpsysConfigurator, JAXON_BLUE
         # self.setServoErrorLimit("LARM_F_JOINT0", sys.float_info.max)
         # self.setServoErrorLimit("LARM_F_JOINT1", sys.float_info.max)
         ###
-        self.startAutoBalancer()
         # Suppress limit over message and behave like real robot that always angle-vector is in seq.
         self.setResetPose(1.0)
-        self.ic_svc.startImpedanceController("larm")
-        self.ic_svc.startImpedanceController("rarm")
-        self.startStabilizer()
+        self.startAutoBalancer()
+        # self.ic_svc.startImpedanceController("larm")
+        # self.ic_svc.startImpedanceController("rarm")
+        # self.startStabilizer()
 
 if __name__ == '__main__':
     hcf = JAXON_BLUECnoidHrpsysConfigurator()
