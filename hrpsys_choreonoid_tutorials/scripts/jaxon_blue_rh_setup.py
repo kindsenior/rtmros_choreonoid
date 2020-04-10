@@ -2,7 +2,7 @@
 
 import sys
 from hrpsys_choreonoid_tutorials.choreonoid_hrpsys_config import ChoreonoidHrpsysConfigurator
-from hrpsys_ros_bridge_tutorials.jaxon_blue_hrpsys_config import JAXON_BLUEHrpsysConfigurator
+from hrpsys_ros_bridge_tutorials.jaxon_blue_hrpsys_config import *
 
 class JAXON_BLUECnoidHrpsysConfigurator(ChoreonoidHrpsysConfigurator, JAXON_BLUEHrpsysConfigurator):
     def __init__(self):
