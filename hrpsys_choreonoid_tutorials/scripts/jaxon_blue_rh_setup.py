@@ -6,6 +6,7 @@ from hrpsys_ros_bridge_tutorials.jaxon_blue_hrpsys_config import *
 
 class JAXON_BLUECnoidHrpsysConfigurator(ChoreonoidHrpsysConfigurator, JAXON_BLUEHrpsysConfigurator):
     def __init__(self):
+        ChoreonoidHrpsysConfigurator.__init__(self)
         JAXON_BLUEHrpsysConfigurator.__init__(self)
 
     def getRTCList (self):
