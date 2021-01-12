@@ -93,6 +93,7 @@ else()
   set(ROBOTHARDWARE_SOURCE ${hrpsys_PREFIX}/share/hrpsys/src/rtc/RobotHardware)
   set(HRPEC_SOURCE         ${hrpsys_PREFIX}/share/hrpsys/src/ec/hrpEC)
 endif()
+set(hrpsys_SOURCE_DIR ${PROJECT_SOURCE_DIR})
 add_subdirectory(iob)
 
 add_custom_target(hrpsys_choreonoid_iob ALL DEPENDS RobotHardware_choreonoid)
