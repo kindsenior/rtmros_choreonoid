@@ -1,0 +1,11 @@
+bush:
+  springT: 7.5e5
+  dampingT: 2.5e3
+  springR: 2.5e3
+  dampingR: 4.0
+
+tilt_laser:
+  TILT_UPPER_BOUND: 1.35
+  TILT_POSITIVE_SPEED: 1.0
+  TILT_LOWER_BOUND: -0.7
+  TILT_NEGATIVE_SPEED: -1.0
