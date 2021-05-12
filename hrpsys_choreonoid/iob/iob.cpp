@@ -1090,7 +1090,7 @@ int read_torque_pgain(int id, double *gain)
     CHECK_JOINT_ID(id);
 #if 0
     if (id == 9)
-    std::cerr << "read_pgain: [" << id << "] " << Pgain[id] << std::endl;
+    std::cerr << "read_tqPgain: [" << id << "] " << Pgain[id] << std::endl;
 #endif
     *gain = tqPgain[id];
     return TRUE;
@@ -1101,7 +1101,7 @@ int write_torque_pgain(int id, double gain)
     CHECK_JOINT_ID(id);
 #if 0
     if (id == 9)
-    std::cerr << "write_pgain: [" << id << "] " << gain << std::endl;
+    std::cerr << "write_tqPgain: [" << id << "] " << gain << std::endl;
 #endif
     tqPgain[id] = gain;
     return TRUE;
@@ -1112,7 +1112,7 @@ int read_torque_dgain(int id, double *gain)
     CHECK_JOINT_ID(id);
 #if 0
     if (id == 9)
-    std::cerr << "read_dgain: [" << id << "] " << Dgain[id] << std::endl;
+    std::cerr << "read_tqDgain: [" << id << "] " << Dgain[id] << std::endl;
 #endif
     *gain = tqDgain[id];
     return TRUE;
@@ -1123,7 +1123,7 @@ int write_torque_dgain(int id, double gain)
     CHECK_JOINT_ID(id);
 #if 0
     if (id == 9)
-    std::cerr << "write_dgain: [" << id << "] " << gain << std::endl;
+    std::cerr << "write_tqDgain: [" << id << "] " << gain << std::endl;
 #endif
     tqDgain[id] = gain;
     return TRUE;
