@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 2.8.3)
 project(jvrc_models)
 
-find_package(catkin REQUIRED COMPONENTS)
+find_package(catkin REQUIRED COMPONENTS roslint)
 
 catkin_package(CFG_EXTRAS jvrc_models-extras.cmake)
 
@@ -16,3 +16,17 @@ else ()
   execute_process(COMMAND git clone https://github.com/jvrc/model.git
     WORKING_DIRECTORY ${PROJECT_SOURCE_DIR})
 endif()
+
+# lint for check existence of tabs
+set(ROSLINT_VRML_CMD cpplint)
+set(ROSLINT_VRML_OPTS "")
+
+file(GLOB_RECURSE MAIN_VRML_FILES *main*.wrl)
+foreach(MAIN_VRML_FILE ${MAIN_VRML_FILES})
+  get_filename_component(MODEL_DIR_NAME ${MAIN_VRML_FILE} DIRECTORY)
+  file(TO_NATIVE_PATH ${MODEL_DIR_NAME}/CPPLINT.cfg LINT_FILE)
+  if(EXISTS ${LINT_FILE})
+    message("execute lint in ${MAIN_VRML_FILE}")
+    roslint_custom("${ROSLINT_VRML_CMD}" "${ROSLINT_VRML_OPTS}" ${MAIN_VRML_FILE})
+  endif()
+endforeach()

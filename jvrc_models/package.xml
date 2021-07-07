@@ -11,6 +11,8 @@
   <!--url>http://ros.org/wiki/jsk_models</url-->
 
   <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>roslint</build_depend>
+  <build_depend>python-cpplint</build_depend>
 
   <export>
   </export>
